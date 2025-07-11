@@ -8,3 +8,8 @@ scrape_configs:
   - job_name: 'MyApp'
     static_configs:
       - targets: ['192.168.149.140:3000']
+
+  - job_name: 'jenkins'
+    metrics_path: '/prometheus'  # Or the path you configured
+    static_configs:
+      - targets: ['192.168.149.141:8080'] # Replace with your Jenkins address
